@@ -3,6 +3,16 @@ const getRandomElement = arr => {
   return arr[Math.floor(Math.random() * arr.length)];
 }
 
+const isValidQuote = obj => {
+  if (obj) {
+    if(obj.hasOwnProperty('quote') && obj.hasOwnProperty('person')) {
+      return true;
+    }
+  }
+  return false;
+}
+
 module.exports = {
-  getRandomElement
+  getRandomElement,
+  isValidQuote
 };
